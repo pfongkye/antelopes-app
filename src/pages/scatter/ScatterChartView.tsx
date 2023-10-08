@@ -7,25 +7,23 @@ import {
   Legend,
 } from "chart.js";
 import { Antelope } from "../../types/antelope";
-import { prepareScatterData } from "../../utils/utils";
+import { getRandomColor, prepareScatterData } from "../../utils/utils";
 
-interface ScatterChartProps {
+interface ScatterChartViewProps {
   antelopes: Antelope[];
 }
 
 ChartJS.register(LinearScale, PointElement, Tooltip, Legend);
 
-export default function ScatterChart({ antelopes }: ScatterChartProps) {
-  //TODO useMemo here 
+export default function ScatterChartView({ antelopes }: ScatterChartViewProps) {
+  //TODO useMemo here
   //(warning: useMemo won't work if the ScatterChart has a conditional rendering which is currently the case here in App with view === 'chart1)
   const preparedData = prepareScatterData(antelopes);
 
   const datasets = Object.keys(preparedData).map((k) => ({
     label: k,
     data: preparedData[k],
-    backgroundColor: `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${
-      Math.random() * 255
-    })`,
+    backgroundColor: getRandomColor(),
   }));
 
   const data = {
