@@ -41,6 +41,8 @@ npm create vite@latest antelopes-app -- --template react-ts
 
 - Use [Jest](https://jestjs.io/docs/getting-started#using-typescript) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing purposes.
 
+- Use [chart.js](https://www.chartjs.org/) for data visualization library. Canvas that can load a large dataset compared to SVG nodes (like [d3.js](https://d3js.org/)).
+
 # Test Cases
 
 - View a table with data related to antelope in columns
@@ -52,6 +54,10 @@ npm create vite@latest antelopes-app -- --template react-ts
 # Miscallenous
 
 - Follow this [article](https://dev.to/hannahadora/jest-testing-with-vite-and-react-typescript-4bap) to setup jest on a React TypeScript project using Vite.
+
+- Add better typings.
+
+- Add routing to change between pages.
 
 # Learnings
 
